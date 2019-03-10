@@ -13,9 +13,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        var calendar = EC_Calendar(year: 2018);
-        calendar.printYear();
     }
 
 
