@@ -23,9 +23,12 @@ class CalendarViewController: UIViewController {
         navigationController?.navigationBar.isTranslucent = false
         navigationItem.title = "Calendar"
         
-        
-        let calendar = EC_Calendar(year: 2018);
-        calendar.printYear();
+        let ec_month = EC_Calendar.getMonth(year: 2018, month: 2)
+        print(ec_month.daysInMonth)
+        print(ec_month.startingWeekDay)
+        let normal_month = Normal_Calender.getMonth(year: 2018, month: 2)
+        print(normal_month.daysInMonth)
+        print(normal_month.startingWeekDay)
         
         configureHeader()
     }
