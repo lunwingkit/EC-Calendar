@@ -46,7 +46,7 @@ class CalendarViewController: UIViewController {
         //yearHeader.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
         
         
-        yearLabel = UILabel(frame: yearHeader.frame)
+        yearLabel = UILabel(frame: CGRect(x: 0, y: 50, width: self.view.frame.width, height: 50))
         yearLabel.text = "YEAR"
         yearLabel.backgroundColor = .white
         yearLabel.textAlignment = .center
@@ -57,7 +57,7 @@ class CalendarViewController: UIViewController {
         
         weekview = UIView(frame: CGRect(x: 0, y: 50, width: self.view.frame.width, height: 50))
         
-        weekStackView = UIStackView(frame: self.view.frame)
+        weekStackView = UIStackView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
         weekStackView.axis = .horizontal
         weekStackView.alignment = .fill
         weekStackView.distribution = .fill

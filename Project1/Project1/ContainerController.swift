@@ -23,7 +23,9 @@ class ContainerController: UIViewController {
     }
     
     func configureCalendarViewController(){
-        calendarViewController = CalendarViewController()
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        calendarViewController = storyBoard.instantiateViewController(withIdentifier: "calendarViewController") as! CalendarViewController
+        //calendarViewController = CalendarViewController()
         displayController = UINavigationController(rootViewController: calendarViewController)
         
         view.addSubview(displayController.view)
