@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XwN-b7-QCr">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,6 +10,45 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Slides Controller-->
+        <scene sceneID="8ZS-9t-6PY">
+            <objects>
+                <viewController id="XwN-b7-QCr" customClass="SlidesController" customModule="Project1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tzg-YQ-lV3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="zrt-kS-V6R">
+                                <rect key="frame" x="48" y="598" width="279" height="37"/>
+                                <color key="pageIndicatorTintColor" red="0.28562527859999998" green="0.68960831170000003" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.28562527859999998" green="0.68960831170000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1c-QD-dbM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zrt-kS-V6R" firstAttribute="leading" secondItem="Tzg-YQ-lV3" secondAttribute="leadingMargin" constant="32" id="PkI-PQ-sn9"/>
+                            <constraint firstAttribute="trailing" secondItem="H1c-QD-dbM" secondAttribute="trailing" id="T5g-bD-mtn"/>
+                            <constraint firstItem="H1c-QD-dbM" firstAttribute="leading" secondItem="Tzg-YQ-lV3" secondAttribute="leading" id="TXb-Td-Laf"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="zrt-kS-V6R" secondAttribute="bottom" constant="32" id="WG4-dX-tWd"/>
+                            <constraint firstItem="H1c-QD-dbM" firstAttribute="top" secondItem="Tzg-YQ-lV3" secondAttribute="top" id="ccZ-BY-gvJ"/>
+                            <constraint firstAttribute="bottom" secondItem="H1c-QD-dbM" secondAttribute="bottom" id="oQc-vJ-U0J"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zrt-kS-V6R" secondAttribute="trailing" constant="32" id="qHV-mF-JgV"/>
+                            <constraint firstItem="zrt-kS-V6R" firstAttribute="centerX" secondItem="Tzg-YQ-lV3" secondAttribute="centerX" id="sYy-x8-Yht"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Y8x-jc-AR9"/>
+                    </view>
+                    <connections>
+                        <outlet property="pageControl" destination="zrt-kS-V6R" id="ecH-rM-Tdx"/>
+                        <outlet property="scrollView" destination="H1c-QD-dbM" id="wOK-LM-ArH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ivG-K2-NRh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-455.19999999999999" y="-27.436281859070466"/>
+        </scene>
         <!--Calendar View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -17,22 +56,13 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="calendarViewController" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="00a-dx-eoa">
-                                <rect key="frame" x="81" y="270" width="250" height="127"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="61.600000000000001" y="39.130434782608695"/>
+            <point key="canvasLocation" x="346" y="-26"/>
         </scene>
     </scenes>
 </document>

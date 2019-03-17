@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Slide0" customModule="Project1" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is EC Calender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldH-Gz-Fzf">
+                    <rect key="frame" x="32" y="32" width="265" height="36"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- A Perennial Calendar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qbh-xc-KUg">
+                    <rect key="frame" x="16" y="100" width="171" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Same months &amp; dates, but smarter weeks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gea-eL-lbO">
+                    <rect key="frame" x="16" y="129" width="332" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Highly compatible with current system" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eN9-He-pUc">
+                    <rect key="frame" x="16" y="158" width="306" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Consistent 52 weeks / year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EMQ-Q6-8OI">
+                    <rect key="frame" x="16" y="187" width="218" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Year starts on Monday and end on Sunday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s7N-jC-UUo">
+                    <rect key="frame" x="16" y="216" width="335" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Annual extra Sunday on week 39" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LBA-qO-Eee">
+                    <rect key="frame" x="16" y="245" width="262" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Leap year extra Sunday on week 13" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gzl-65-fPm">
+                    <rect key="frame" x="16" y="274" width="281" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- February has consistent 29 days" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFD-X5-Kdv">
+                    <rect key="frame" x="16" y="303" width="261" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstItem="gea-eL-lbO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="540-iK-0tH"/>
+                <constraint firstItem="Qbh-xc-KUg" firstAttribute="top" secondItem="ldH-Gz-Fzf" secondAttribute="bottom" constant="32" id="BSM-tv-k1c"/>
+                <constraint firstItem="LBA-qO-Eee" firstAttribute="top" secondItem="s7N-jC-UUo" secondAttribute="bottom" constant="8" id="H32-2W-Q0K"/>
+                <constraint firstItem="EMQ-Q6-8OI" firstAttribute="top" secondItem="eN9-He-pUc" secondAttribute="bottom" constant="8" id="Iqc-gM-Xle"/>
+                <constraint firstItem="ldH-Gz-Fzf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="32" id="Jc3-dQ-dG3"/>
+                <constraint firstItem="eN9-He-pUc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="LBF-9Q-aTa"/>
+                <constraint firstItem="ldH-Gz-Fzf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="32" id="Mte-EK-2BL"/>
+                <constraint firstItem="EMQ-Q6-8OI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="NeA-DX-i43"/>
+                <constraint firstItem="s7N-jC-UUo" firstAttribute="top" secondItem="EMQ-Q6-8OI" secondAttribute="bottom" constant="8" id="Rqo-IU-S38"/>
+                <constraint firstItem="Gzl-65-fPm" firstAttribute="top" secondItem="LBA-qO-Eee" secondAttribute="bottom" constant="8" id="SD5-t6-hb0"/>
+                <constraint firstItem="BFD-X5-Kdv" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="U43-ON-44c"/>
+                <constraint firstItem="eN9-He-pUc" firstAttribute="top" secondItem="gea-eL-lbO" secondAttribute="bottom" constant="8" id="UFW-67-O2B"/>
+                <constraint firstItem="gea-eL-lbO" firstAttribute="top" secondItem="Qbh-xc-KUg" secondAttribute="bottom" constant="8" id="V1v-ZG-uio"/>
+                <constraint firstItem="Qbh-xc-KUg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="YrU-g0-Ip9"/>
+                <constraint firstItem="BFD-X5-Kdv" firstAttribute="top" secondItem="Gzl-65-fPm" secondAttribute="bottom" constant="8" id="iiJ-uQ-ySy"/>
+                <constraint firstItem="LBA-qO-Eee" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="k3P-bs-y1G"/>
+                <constraint firstItem="Gzl-65-fPm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="opF-SZ-FCO"/>
+                <constraint firstItem="s7N-jC-UUo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="v7k-ED-AdI"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="39.200000000000003" y="46.326836581709152"/>
+        </view>
+    </objects>
+</document>
