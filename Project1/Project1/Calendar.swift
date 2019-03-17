@@ -18,9 +18,11 @@ class Normal_Calender: Custom_Calender {
         
         let formatter  = DateFormatter()
         formatter.dateFormat = "yyyy-M-d"
+        formatter.timeZone = TimeZone(secondsFromGMT: 0)
         let dateString = String(year) + "-" + String(month) + "-1"
         let date = formatter.date(from: dateString)
-        let calendar = Calendar(identifier: .gregorian)
+        var calendar = Calendar(identifier: .gregorian)
+        calendar.timeZone = TimeZone(secondsFromGMT: -8 * 3600)!
         let startingWeekDay = calendar.component(.weekday, from: date!)
         
         let isLeapYear = year % 4 == 0
@@ -38,6 +40,55 @@ class Normal_Calender: Custom_Calender {
         }
         
         return Month(daysInMonth: daysInMonth, startingWeekDay: startingWeekDay)
+        
+    }
+    
+    static func getDayByDayOfWeek(year: Int, month: Int, dayofWeek: Int, dayofWeekIndex: Int) -> String {
+        
+        let targetMonth = Normal_Calender.getMonth(year: year, month: month)
+        
+        var dow: Int = targetMonth.startingWeekDay;
+        var dowIndex: Int = 0;
+        
+        for i in 1..<targetMonth.daysInMonth {
+            
+            if(dow == dayofWeek && dowIndex == dayofWeekIndex) {
+                
+                var dowString: String;
+                
+                switch(dow) {
+                case 1:
+                    dowString = "Monday"
+                case 2:
+                    dowString = "Tuesday"
+                case 3:
+                    dowString = "Wednesday"
+                case 4:
+                    dowString = "Thursday"
+                case 5:
+                    dowString = "Friday"
+                case 6:
+                    dowString = "Saturday"
+                case 7:
+                    dowString = "Sunday"
+                default:
+                    dowString = "This should not happen"
+                }
+                
+                return "\(year)-\(month)-\(i), \(dowString)"
+                
+            }
+            
+            dow += 1;
+            
+            if(dow > 7) {
+                dowIndex += 1;
+                dow = 1;
+            }
+            
+        }
+        
+        return "Not Found"
         
     }
     
@@ -85,6 +136,55 @@ class EC_Calendar: Custom_Calender {
         }
         
         return Month(daysInMonth: daysInMonth, startingWeekDay: startingWeekDay)
+        
+    }
+    
+    static func getDayByDayOfWeek(year: Int, month: Int, dayofWeek: Int, dayofWeekIndex: Int) -> String {
+        
+        let targetMonth = EC_Calendar.getMonth(year: year, month: month)
+        
+        var dow: Int = targetMonth.startingWeekDay;
+        var dowIndex: Int = 0;
+        
+        for i in 1..<targetMonth.daysInMonth {
+            
+            if(dow == dayofWeek && dowIndex == dayofWeekIndex) {
+                
+                var dowString: String;
+                
+                switch(dow) {
+                case 1:
+                    dowString = "Monday"
+                case 2:
+                    dowString = "Tuesday"
+                case 3:
+                    dowString = "Wednesday"
+                case 4:
+                    dowString = "Thursday"
+                case 5:
+                    dowString = "Friday"
+                case 6:
+                    dowString = "Saturday"
+                case 7:
+                    dowString = "Sunday"
+                default:
+                    dowString = "This should not happen"
+                }
+                
+                return "\(year)-\(month)-\(i), \(dowString)"
+                
+            }
+            
+            dow += 1;
+            
+            if(dow > 7) {
+                dowIndex += 1;
+                dow = 1;
+            }
+            
+        }
+        
+        return "Not Found"
         
     }
     

@@ -24,7 +24,7 @@ class SlidesController: UIViewController, UIScrollViewDelegate {
         
         let slide0 = Slide0(frame: CGRect(x: self.view.frame.width * CGFloat(0), y: 0, width: self.scrollView.frame.width, height: self.scrollView.frame.height))
         
-        let slide1 = Slide0(frame: CGRect(x: self.view.frame.width * CGFloat(1), y: 0, width: self.scrollView.frame.width, height: self.scrollView.frame.height))
+        let slide1 = Slide1(frame: CGRect(x: self.view.frame.width * CGFloat(1), y: 0, width: self.scrollView.frame.width, height: self.scrollView.frame.height))
         
         slides.append(slide0)
         slides.append(slide1)

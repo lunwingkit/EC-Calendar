@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Slide1" customModule="Project1" customModuleProvider="target">
+            <connections>
+                <outlet property="ECLabel" destination="kqw-Un-7qU" id="4rK-Ap-gU2"/>
+                <outlet property="NormalLabel" destination="OpX-4a-HaO" id="pN1-Mr-vtt"/>
+                <outlet property="festivalPicker" destination="bec-7j-Tx0" id="2HT-ck-jiP"/>
+                <outlet property="yearPicker" destination="mj0-Yb-5qD" id="Vce-8r-CTU"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Special Dates" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="biw-9f-XsP">
+                    <rect key="frame" x="32" y="32" width="176.5" height="36"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Festival" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hq4-Px-Skd">
+                    <rect key="frame" x="32" y="100" width="79" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="PbJ-1q-HBb"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bec-7j-Tx0">
+                    <rect key="frame" x="159" y="100" width="200" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="C3S-oJ-CSt"/>
+                        <constraint firstAttribute="height" constant="100" id="kjR-lw-3RD"/>
+                    </constraints>
+                </pickerView>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mj0-Yb-5qD">
+                    <rect key="frame" x="159" y="208" width="200" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="9o5-iJ-0CP"/>
+                        <constraint firstAttribute="height" constant="100" id="Mi6-Wn-re1"/>
+                    </constraints>
+                </pickerView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7r-73-x0u">
+                    <rect key="frame" x="32" y="208" width="46" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="73k-Qr-1Lf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EC-Calendar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R7d-18-Ao3">
+                    <rect key="frame" x="103.5" y="340" width="168" height="36"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <color key="textColor" red="0.0" green="0.46055603229999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2019-1-1, Monday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kqw-Un-7qU">
+                    <rect key="frame" x="92" y="384" width="191" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <color key="textColor" red="0.0" green="0.46055603229999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Normal Calendar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6YO-yW-AQo">
+                    <rect key="frame" x="79" y="445" width="217" height="36"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <color key="textColor" red="0.51164490640000004" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2019-1-1, Monday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OpX-4a-HaO">
+                    <rect key="frame" x="92" y="489" width="191" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <color key="textColor" red="0.51164490640000004" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstItem="6YO-yW-AQo" firstAttribute="top" secondItem="kqw-Un-7qU" secondAttribute="bottom" constant="32" id="2kh-It-F06"/>
+                <constraint firstItem="i7r-73-x0u" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="32" id="9lf-EW-Tb7"/>
+                <constraint firstItem="OpX-4a-HaO" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="FqS-pL-CIB"/>
+                <constraint firstItem="OpX-4a-HaO" firstAttribute="top" secondItem="6YO-yW-AQo" secondAttribute="bottom" constant="8" id="I7I-kE-FMV"/>
+                <constraint firstItem="R7d-18-Ao3" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="KaG-YG-rck"/>
+                <constraint firstItem="bec-7j-Tx0" firstAttribute="top" secondItem="biw-9f-XsP" secondAttribute="bottom" constant="32" id="RcU-h8-kwA"/>
+                <constraint firstItem="biw-9f-XsP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="32" id="TyX-mJ-0dt"/>
+                <constraint firstItem="6YO-yW-AQo" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="XYz-eB-DxT"/>
+                <constraint firstItem="kqw-Un-7qU" firstAttribute="top" secondItem="R7d-18-Ao3" secondAttribute="bottom" constant="8" id="Z7p-4d-66R"/>
+                <constraint firstItem="R7d-18-Ao3" firstAttribute="top" secondItem="mj0-Yb-5qD" secondAttribute="bottom" constant="32" id="ZBX-aZ-1wd"/>
+                <constraint firstItem="i7r-73-x0u" firstAttribute="top" secondItem="Hq4-Px-Skd" secondAttribute="bottom" constant="8" id="bSg-gc-QYN"/>
+                <constraint firstAttribute="trailing" secondItem="mj0-Yb-5qD" secondAttribute="trailing" constant="16" id="buf-us-AN3"/>
+                <constraint firstItem="Hq4-Px-Skd" firstAttribute="top" secondItem="biw-9f-XsP" secondAttribute="bottom" constant="32" id="cjj-WG-Kfs"/>
+                <constraint firstItem="biw-9f-XsP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="32" id="fpe-hf-vO6"/>
+                <constraint firstAttribute="trailing" secondItem="bec-7j-Tx0" secondAttribute="trailing" constant="16" id="pEC-c6-hsg"/>
+                <constraint firstItem="Hq4-Px-Skd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="32" id="pbZ-E1-239"/>
+                <constraint firstItem="kqw-Un-7qU" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="qXn-7r-Sko"/>
+                <constraint firstItem="mj0-Yb-5qD" firstAttribute="top" secondItem="bec-7j-Tx0" secondAttribute="bottom" constant="8" id="xoE-Cl-EcG"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="39.200000000000003" y="46.326836581709152"/>
+        </view>
+    </objects>
+</document>

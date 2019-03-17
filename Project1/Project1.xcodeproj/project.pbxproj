@@ -18,6 +18,8 @@
 		ACBB0B0B223E248B000F2D9B /* SlidesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBB0B0A223E248B000F2D9B /* SlidesController.swift */; };
 		ACBB0B0F223E2A78000F2D9B /* Slide0.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBB0B0E223E2A78000F2D9B /* Slide0.swift */; };
 		ACBB0B11223E2A8C000F2D9B /* Slide0.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACBB0B10223E2A8C000F2D9B /* Slide0.xib */; };
+		ACBB0B13223E9F86000F2D9B /* Slide1.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACBB0B12223E9F86000F2D9B /* Slide1.xib */; };
+		ACBB0B15223E9F97000F2D9B /* Slide1.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBB0B14223E9F97000F2D9B /* Slide1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		ACBB0B0A223E248B000F2D9B /* SlidesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidesController.swift; sourceTree = "<group>"; };
 		ACBB0B0E223E2A78000F2D9B /* Slide0.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide0.swift; sourceTree = "<group>"; };
 		ACBB0B10223E2A8C000F2D9B /* Slide0.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slide0.xib; sourceTree = "<group>"; };
+		ACBB0B12223E9F86000F2D9B /* Slide1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slide1.xib; sourceTree = "<group>"; };
+		ACBB0B14223E9F97000F2D9B /* Slide1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +81,9 @@
 				AC2887E2223580E4000C50F4 /* Calendar.swift */,
 				ACBB0B0A223E248B000F2D9B /* SlidesController.swift */,
 				ACBB0B0E223E2A78000F2D9B /* Slide0.swift */,
+				ACBB0B14223E9F97000F2D9B /* Slide1.swift */,
 				ACBB0B10223E2A8C000F2D9B /* Slide0.xib */,
+				ACBB0B12223E9F86000F2D9B /* Slide1.xib */,
 			);
 			path = Project1;
 			sourceTree = "<group>";
@@ -143,6 +149,7 @@
 				ACBB0B11223E2A8C000F2D9B /* Slide0.xib in Resources */,
 				97D7B7652232B876001DE6DB /* LaunchScreen.storyboard in Resources */,
 				97D7B7622232B876001DE6DB /* Assets.xcassets in Resources */,
+				ACBB0B13223E9F86000F2D9B /* Slide1.xib in Resources */,
 				97D7B7602232B874001DE6DB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -155,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				977DFCA822351527005BB0AD /* CalendarViewController.swift in Sources */,
+				ACBB0B15223E9F97000F2D9B /* Slide1.swift in Sources */,
 				ACBB0B0B223E248B000F2D9B /* SlidesController.swift in Sources */,
 				AC2887E3223580E4000C50F4 /* Calendar.swift in Sources */,
 				97D7B75D2232B874001DE6DB /* ViewController.swift in Sources */,
