@@ -92,6 +92,37 @@ class Normal_Calender: Custom_Calender {
         
     }
     
+    static func getDay(year: Int, month: Int, day: Int) -> String {
+        
+        let targetMonth = Normal_Calender.getMonth(year: year, month: month)
+        
+        var dow: Int = (day + targetMonth.startingWeekDay - 2) % 7 + 1;
+        
+        var dowString: String;
+        
+        switch(dow) {
+        case 1:
+            dowString = "Monday"
+        case 2:
+            dowString = "Tuesday"
+        case 3:
+            dowString = "Wednesday"
+        case 4:
+            dowString = "Thursday"
+        case 5:
+            dowString = "Friday"
+        case 6:
+            dowString = "Saturday"
+        case 7:
+            dowString = "Sunday"
+        default:
+            dowString = "This should not happen"
+        }
+        
+        return "\(year)-\(month)-\(day), \(dowString)"
+        
+    }
+    
 }
 
 class EC_Calendar: Custom_Calender {
@@ -185,6 +216,37 @@ class EC_Calendar: Custom_Calender {
         }
         
         return "Not Found"
+        
+    }
+    
+    static func getDay(year: Int, month: Int, day: Int) -> String {
+        
+        let targetMonth = EC_Calendar.getMonth(year: year, month: month)
+        
+        var dow: Int = (day + targetMonth.startingWeekDay - 2) % 7 + 1;
+        
+        var dowString: String;
+        
+        switch(dow) {
+        case 1:
+            dowString = "Monday"
+        case 2:
+            dowString = "Tuesday"
+        case 3:
+            dowString = "Wednesday"
+        case 4:
+            dowString = "Thursday"
+        case 5:
+            dowString = "Friday"
+        case 6:
+            dowString = "Saturday"
+        case 7:
+            dowString = "Sunday"
+        default:
+            dowString = "This should not happen"
+        }
+        
+        return "\(year)-\(month)-\(day), \(dowString)"
         
     }
     

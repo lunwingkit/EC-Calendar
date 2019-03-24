@@ -46,7 +46,8 @@ class Slide1: UIView, UIPickerViewDelegate, UIPickerViewDataSource {
         
         self.festivalArray = [
             Festival(name: "Father's Day", month: 6, day: nil, dayOfWeek: 7, dayOfWeekIndex: 2),
-            Festival(name: "Mother's Day", month: 5, day: nil, dayOfWeek: 7, dayOfWeekIndex: 1)
+            Festival(name: "Mother's Day", month: 5, day: nil, dayOfWeek: 7, dayOfWeekIndex: 1),
+            Festival(name: "Christmas Day", month: 12, day: 25, dayOfWeek: nil, dayOfWeekIndex: nil)
         ]
         self.yearArray = [String]()
         for i in (1970..<2020).reversed() {
@@ -77,9 +78,24 @@ class Slide1: UIView, UIPickerViewDelegate, UIPickerViewDataSource {
         yearPicker.delegate = self
         yearPicker.dataSource = self
         
+        updateLabels()
         
-        self.ECLabel.text = EC_Calendar.getDayByDayOfWeek(year: currentYear, month: currentFestival.month!, dayofWeek: currentFestival.dayOfWeek!, dayofWeekIndex: currentFestival.dayOfWeekIndex!)
-        self.NormalLabel.text = Normal_Calender.getDayByDayOfWeek(year: currentYear, month: currentFestival.month!, dayofWeek: currentFestival.dayOfWeek!, dayofWeekIndex: currentFestival.dayOfWeekIndex!)
+    }
+    
+    func updateLabels() {
+        
+        if(currentFestival.day == nil) {
+            
+            self.ECLabel.text = EC_Calendar.getDayByDayOfWeek(year: currentYear, month: currentFestival.month!, dayofWeek: currentFestival.dayOfWeek!, dayofWeekIndex: currentFestival.dayOfWeekIndex!)
+            self.NormalLabel.text = Normal_Calender.getDayByDayOfWeek(year: currentYear, month: currentFestival.month!, dayofWeek: currentFestival.dayOfWeek!, dayofWeekIndex: currentFestival.dayOfWeekIndex!)
+            
+        } else {
+            
+            self.ECLabel.text = EC_Calendar.getDay(year: currentYear, month: currentFestival.month!, day: currentFestival.day!)
+            self.NormalLabel.text = Normal_Calender.getDay(year: currentYear, month: currentFestival.month!, day: currentFestival.day!)
+            
+        }
+        
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -111,15 +127,13 @@ class Slide1: UIView, UIPickerViewDelegate, UIPickerViewDataSource {
             
             self.currentFestival = self.festivalArray[row]
             
-            self.ECLabel.text = EC_Calendar.getDayByDayOfWeek(year: currentYear, month: currentFestival.month!, dayofWeek: currentFestival.dayOfWeek!, dayofWeekIndex: currentFestival.dayOfWeekIndex!)
-            self.NormalLabel.text = Normal_Calender.getDayByDayOfWeek(year: currentYear, month: currentFestival.month!, dayofWeek: currentFestival.dayOfWeek!, dayofWeekIndex: currentFestival.dayOfWeekIndex!)
+            updateLabels()
             
         case yearPicker:
             
             self.currentYear = Int(self.yearArray[row])!
 
-            self.ECLabel.text = EC_Calendar.getDayByDayOfWeek(year: currentYear, month: currentFestival.month!, dayofWeek: currentFestival.dayOfWeek!, dayofWeekIndex: currentFestival.dayOfWeekIndex!)
-            self.NormalLabel.text = Normal_Calender.getDayByDayOfWeek(year: currentYear, month: currentFestival.month!, dayofWeek: currentFestival.dayOfWeek!, dayofWeekIndex: currentFestival.dayOfWeekIndex!)
+            updateLabels()
             
         default:
             print("How did this happened")

@@ -26,8 +26,11 @@ class SlidesController: UIViewController, UIScrollViewDelegate {
         
         let slide1 = Slide1(frame: CGRect(x: self.view.frame.width * CGFloat(1), y: 0, width: self.scrollView.frame.width, height: self.scrollView.frame.height))
         
+        let slide2 = Slide2(frame: CGRect(x: self.view.frame.width * CGFloat(2), y: 0, width: self.scrollView.frame.width, height: self.scrollView.frame.height))
+        
         slides.append(slide0)
         slides.append(slide1)
+        slides.append(slide2)
         
         for i in 0..<slides.count {
             scrollView.addSubview(slides[i])

@@ -15,11 +15,15 @@
 		97D7B7622232B876001DE6DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97D7B7612232B876001DE6DB /* Assets.xcassets */; };
 		97D7B7652232B876001DE6DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97D7B7632232B876001DE6DB /* LaunchScreen.storyboard */; };
 		AC2887E3223580E4000C50F4 /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2887E2223580E4000C50F4 /* Calendar.swift */; };
+		AC9438D0224780D1005D7579 /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9438CE224780D1005D7579 /* CalendarCell.swift */; };
+		AC9438D1224780D1005D7579 /* CalendarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC9438CF224780D1005D7579 /* CalendarCell.xib */; };
 		ACBB0B0B223E248B000F2D9B /* SlidesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBB0B0A223E248B000F2D9B /* SlidesController.swift */; };
 		ACBB0B0F223E2A78000F2D9B /* Slide0.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBB0B0E223E2A78000F2D9B /* Slide0.swift */; };
 		ACBB0B11223E2A8C000F2D9B /* Slide0.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACBB0B10223E2A8C000F2D9B /* Slide0.xib */; };
 		ACBB0B13223E9F86000F2D9B /* Slide1.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACBB0B12223E9F86000F2D9B /* Slide1.xib */; };
 		ACBB0B15223E9F97000F2D9B /* Slide1.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBB0B14223E9F97000F2D9B /* Slide1.swift */; };
+		ACEBD4EC224773FA007853A4 /* Slide2.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACEBD4EB224773FA007853A4 /* Slide2.xib */; };
+		ACEBD4EE22477407007853A4 /* Slide2.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEBD4ED22477407007853A4 /* Slide2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,11 +37,15 @@
 		97D7B7642232B876001DE6DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97D7B7662232B876001DE6DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC2887E2223580E4000C50F4 /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
+		AC9438CE224780D1005D7579 /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
+		AC9438CF224780D1005D7579 /* CalendarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarCell.xib; sourceTree = "<group>"; };
 		ACBB0B0A223E248B000F2D9B /* SlidesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidesController.swift; sourceTree = "<group>"; };
 		ACBB0B0E223E2A78000F2D9B /* Slide0.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide0.swift; sourceTree = "<group>"; };
 		ACBB0B10223E2A8C000F2D9B /* Slide0.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slide0.xib; sourceTree = "<group>"; };
 		ACBB0B12223E9F86000F2D9B /* Slide1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slide1.xib; sourceTree = "<group>"; };
 		ACBB0B14223E9F97000F2D9B /* Slide1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide1.swift; sourceTree = "<group>"; };
+		ACEBD4EB224773FA007853A4 /* Slide2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slide2.xib; sourceTree = "<group>"; };
+		ACEBD4ED22477407007853A4 /* Slide2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +78,7 @@
 		97D7B7592232B874001DE6DB /* Project1 */ = {
 			isa = PBXGroup;
 			children = (
+				ACEBD4EA2247738D007853A4 /* Slides */,
 				97D7B75A2232B874001DE6DB /* AppDelegate.swift */,
 				97D7B75C2232B874001DE6DB /* ViewController.swift */,
 				977DFCA522351513005BB0AD /* ContainerController.swift */,
@@ -79,13 +88,24 @@
 				97D7B7632232B876001DE6DB /* LaunchScreen.storyboard */,
 				97D7B7662232B876001DE6DB /* Info.plist */,
 				AC2887E2223580E4000C50F4 /* Calendar.swift */,
+			);
+			path = Project1;
+			sourceTree = "<group>";
+		};
+		ACEBD4EA2247738D007853A4 /* Slides */ = {
+			isa = PBXGroup;
+			children = (
 				ACBB0B0A223E248B000F2D9B /* SlidesController.swift */,
 				ACBB0B0E223E2A78000F2D9B /* Slide0.swift */,
 				ACBB0B14223E9F97000F2D9B /* Slide1.swift */,
 				ACBB0B10223E2A8C000F2D9B /* Slide0.xib */,
 				ACBB0B12223E9F86000F2D9B /* Slide1.xib */,
+				ACEBD4EB224773FA007853A4 /* Slide2.xib */,
+				ACEBD4ED22477407007853A4 /* Slide2.swift */,
+				AC9438CE224780D1005D7579 /* CalendarCell.swift */,
+				AC9438CF224780D1005D7579 /* CalendarCell.xib */,
 			);
-			path = Project1;
+			path = Slides;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,8 +166,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACEBD4EC224773FA007853A4 /* Slide2.xib in Resources */,
 				ACBB0B11223E2A8C000F2D9B /* Slide0.xib in Resources */,
 				97D7B7652232B876001DE6DB /* LaunchScreen.storyboard in Resources */,
+				AC9438D1224780D1005D7579 /* CalendarCell.xib in Resources */,
 				97D7B7622232B876001DE6DB /* Assets.xcassets in Resources */,
 				ACBB0B13223E9F86000F2D9B /* Slide1.xib in Resources */,
 				97D7B7602232B874001DE6DB /* Main.storyboard in Resources */,
@@ -165,10 +187,12 @@
 				ACBB0B15223E9F97000F2D9B /* Slide1.swift in Sources */,
 				ACBB0B0B223E248B000F2D9B /* SlidesController.swift in Sources */,
 				AC2887E3223580E4000C50F4 /* Calendar.swift in Sources */,
+				ACEBD4EE22477407007853A4 /* Slide2.swift in Sources */,
 				97D7B75D2232B874001DE6DB /* ViewController.swift in Sources */,
 				97D7B75B2232B874001DE6DB /* AppDelegate.swift in Sources */,
 				ACBB0B0F223E2A78000F2D9B /* Slide0.swift in Sources */,
 				977DFCA622351513005BB0AD /* ContainerController.swift in Sources */,
+				AC9438D0224780D1005D7579 /* CalendarCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
