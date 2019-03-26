@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		972411B4224A69150054B72F /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972411B2224A69150054B72F /* CustomTableViewCell.swift */; };
+		972411B5224A69150054B72F /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 972411B3224A69150054B72F /* CustomTableViewCell.xib */; };
+		972411B8224A74990054B72F /* NewEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972411B7224A74990054B72F /* NewEventViewController.swift */; };
+		972411C4224A9BFB0054B72F /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 972411C1224A9B5B0054B72F /* Eureka.framework */; };
+		972411C5224A9BFB0054B72F /* Eureka.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 972411C1224A9B5B0054B72F /* Eureka.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		977DFCA622351513005BB0AD /* ContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977DFCA522351513005BB0AD /* ContainerController.swift */; };
 		977DFCA822351527005BB0AD /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977DFCA722351527005BB0AD /* CalendarViewController.swift */; };
 		977DFCF62248AF81005BB0AD /* CalendarViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 977DFCF52248AF81005BB0AD /* CalendarViewController.storyboard */; };
@@ -30,7 +35,49 @@
 		ACEBD4EE22477407007853A4 /* Slide2.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEBD4ED22477407007853A4 /* Slide2.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		972411C0224A9B5B0054B72F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 972411BB224A9B5B0054B72F /* Eureka.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 51729DEB1B9A4F5E004A00EB;
+			remoteInfo = Eureka;
+		};
+		972411C2224A9B5B0054B72F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 972411BB224A9B5B0054B72F /* Eureka.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 51729DF51B9A4F5E004A00EB;
+			remoteInfo = EurekaTests;
+		};
+		972411C6224A9BFB0054B72F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 972411BB224A9B5B0054B72F /* Eureka.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 51729DEA1B9A4F5E004A00EB;
+			remoteInfo = Eureka;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		972411C8224A9BFC0054B72F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				972411C5224A9BFB0054B72F /* Eureka.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		972411B2224A69150054B72F /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		972411B3224A69150054B72F /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		972411B7224A74990054B72F /* NewEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEventViewController.swift; sourceTree = "<group>"; };
+		972411BB224A9B5B0054B72F /* Eureka.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Eureka.xcodeproj; path = Eureka/Eureka.xcodeproj; sourceTree = "<group>"; };
 		977DFCA522351513005BB0AD /* ContainerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerController.swift; sourceTree = "<group>"; };
 		977DFCA722351527005BB0AD /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		977DFCF52248AF81005BB0AD /* CalendarViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CalendarViewController.storyboard; sourceTree = "<group>"; };
@@ -61,17 +108,43 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				972411C4224A9BFB0054B72F /* Eureka.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		972411B6224A69270054B72F /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				977DFCA722351527005BB0AD /* CalendarViewController.swift */,
+				977DFCF72248C066005BB0AD /* CalendarViewCell.swift */,
+				977DFCF82248C066005BB0AD /* CalendarViewCell.xib */,
+				97D9FA2F22493D5D0058152C /* CalendarCollectionViewDD.swift */,
+				977DFCF52248AF81005BB0AD /* CalendarViewController.storyboard */,
+				972411B7224A74990054B72F /* NewEventViewController.swift */,
+				972411B2224A69150054B72F /* CustomTableViewCell.swift */,
+				972411B3224A69150054B72F /* CustomTableViewCell.xib */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		972411BC224A9B5B0054B72F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				972411C1224A9B5B0054B72F /* Eureka.framework */,
+				972411C3224A9B5B0054B72F /* EurekaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		97D7B74E2232B874001DE6DB = {
 			isa = PBXGroup;
 			children = (
 				97D7B7592232B874001DE6DB /* Project1 */,
 				97D7B7582232B874001DE6DB /* Products */,
+				972411BB224A9B5B0054B72F /* Eureka.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,13 +161,9 @@
 			children = (
 				ACEBD4EA2247738D007853A4 /* Slides */,
 				97D7B75A2232B874001DE6DB /* AppDelegate.swift */,
+				972411B6224A69270054B72F /* Calendar */,
 				97D7B75C2232B874001DE6DB /* ViewController.swift */,
 				977DFCA522351513005BB0AD /* ContainerController.swift */,
-				977DFCA722351527005BB0AD /* CalendarViewController.swift */,
-				977DFCF72248C066005BB0AD /* CalendarViewCell.swift */,
-				977DFCF82248C066005BB0AD /* CalendarViewCell.xib */,
-				977DFCF52248AF81005BB0AD /* CalendarViewController.storyboard */,
-				97D9FA2F22493D5D0058152C /* CalendarCollectionViewDD.swift */,
 				97D7B75E2232B874001DE6DB /* Main.storyboard */,
 				97D7B7612232B876001DE6DB /* Assets.xcassets */,
 				97D7B7632232B876001DE6DB /* LaunchScreen.storyboard */,
@@ -130,10 +199,12 @@
 				97D7B7532232B874001DE6DB /* Sources */,
 				97D7B7542232B874001DE6DB /* Frameworks */,
 				97D7B7552232B874001DE6DB /* Resources */,
+				972411C8224A9BFC0054B72F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				972411C7224A9BFB0054B72F /* PBXTargetDependency */,
 			);
 			name = Project1;
 			productName = Project1;
@@ -166,12 +237,35 @@
 			mainGroup = 97D7B74E2232B874001DE6DB;
 			productRefGroup = 97D7B7582232B874001DE6DB /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 972411BC224A9B5B0054B72F /* Products */;
+					ProjectRef = 972411BB224A9B5B0054B72F /* Eureka.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				97D7B7562232B874001DE6DB /* Project1 */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		972411C1224A9B5B0054B72F /* Eureka.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Eureka.framework;
+			remoteRef = 972411C0224A9B5B0054B72F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		972411C3224A9B5B0054B72F /* EurekaTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = EurekaTests.xctest;
+			remoteRef = 972411C2224A9B5B0054B72F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		97D7B7552232B874001DE6DB /* Resources */ = {
@@ -186,6 +280,7 @@
 				AC9438D1224780D1005D7579 /* CalendarCell.xib in Resources */,
 				97D7B7622232B876001DE6DB /* Assets.xcassets in Resources */,
 				ACBB0B13223E9F86000F2D9B /* Slide1.xib in Resources */,
+				972411B5224A69150054B72F /* CustomTableViewCell.xib in Resources */,
 				97D7B7602232B874001DE6DB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,11 +303,21 @@
 				97D7B75B2232B874001DE6DB /* AppDelegate.swift in Sources */,
 				ACBB0B0F223E2A78000F2D9B /* Slide0.swift in Sources */,
 				977DFCA622351513005BB0AD /* ContainerController.swift in Sources */,
+				972411B8224A74990054B72F /* NewEventViewController.swift in Sources */,
 				AC9438D0224780D1005D7579 /* CalendarCell.swift in Sources */,
+				972411B4224A69150054B72F /* CustomTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		972411C7224A9BFB0054B72F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Eureka;
+			targetProxy = 972411C6224A9BFB0054B72F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		97D7B75E2232B874001DE6DB /* Main.storyboard */ = {
@@ -353,6 +458,7 @@
 		97D7B76A2232B876001DE6DB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YLP2R5RPRK;
@@ -363,6 +469,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = CS4298.Project1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -371,6 +478,7 @@
 		97D7B76B2232B876001DE6DB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YLP2R5RPRK;
@@ -381,6 +489,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = CS4298.Project1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

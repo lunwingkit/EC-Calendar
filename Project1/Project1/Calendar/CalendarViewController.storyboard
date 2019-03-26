@@ -194,7 +194,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ERW-9N-xoD"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Calendar" largeTitleDisplayMode="always" id="o8G-BY-hl0"/>
+                    <navigationItem key="navigationItem" title="Calendar" largeTitleDisplayMode="always" id="o8G-BY-hl0">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="hfQ-aS-pO2"/>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="AbH-vM-V4T">
+                                <connections>
+                                    <segue destination="KdA-FJ-Le7" kind="presentation" id="vEe-GB-zqQ"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="pause" id="R16-zp-u1s"/>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <connections>
                         <outlet property="calendarCollectionView" destination="9ku-Zn-qEA" id="Iez-GA-lek"/>
                         <outlet property="ecCalendarCollectionView" destination="tUF-UZ-tS1" id="Dob-oA-a28"/>
@@ -207,6 +217,49 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nm1-l4-Lp8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-588.40579710144937" y="100.2717391304348"/>
+        </scene>
+        <!--New Event View Controller-->
+        <scene sceneID="QyY-1p-GiZ">
+            <objects>
+                <viewController id="KdA-FJ-Le7" customClass="NewEventViewController" customModule="Project1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a3y-IN-5QS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vUG-kq-OIo">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="New Event" id="YOu-fY-x3G">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="NGL-nM-mYu">
+                                            <connections>
+                                                <action selector="cancelClicked:" destination="KdA-FJ-Le7" id="195-3Z-Q6b"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Add" id="vzM-Il-GhV"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Bfe-bx-GSb">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vUG-kq-OIo" firstAttribute="leading" secondItem="0mS-zR-vfU" secondAttribute="leading" id="2Wr-4z-oxI"/>
+                            <constraint firstItem="Bfe-bx-GSb" firstAttribute="leading" secondItem="0mS-zR-vfU" secondAttribute="leading" id="2q0-5h-As4"/>
+                            <constraint firstItem="vUG-kq-OIo" firstAttribute="trailing" secondItem="0mS-zR-vfU" secondAttribute="trailing" id="7E0-ra-HJ7"/>
+                            <constraint firstItem="0mS-zR-vfU" firstAttribute="trailing" secondItem="Bfe-bx-GSb" secondAttribute="trailing" id="BZy-yx-rjf"/>
+                            <constraint firstItem="vUG-kq-OIo" firstAttribute="top" secondItem="0mS-zR-vfU" secondAttribute="top" id="Rnm-42-plg"/>
+                            <constraint firstItem="0mS-zR-vfU" firstAttribute="bottom" secondItem="Bfe-bx-GSb" secondAttribute="bottom" id="lV9-3H-Zci"/>
+                            <constraint firstItem="Bfe-bx-GSb" firstAttribute="top" secondItem="vUG-kq-OIo" secondAttribute="bottom" id="oBI-Ee-615"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0mS-zR-vfU"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tLW-bn-PPZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="163.768115942029" y="101.90217391304348"/>
         </scene>
     </scenes>
 </document>
