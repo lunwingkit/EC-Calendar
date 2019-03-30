@@ -152,13 +152,13 @@ import UIKit
         
         let layout = UICollectionViewFlowLayout()
         
-        layout.itemSize = CGSize(width: itemSize, height: 25)
+        layout.itemSize = CGSize(width: itemSize, height: 22)
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 0
         
         let layout2 = UICollectionViewFlowLayout()
         
-        layout2.itemSize = CGSize(width: itemSize, height: 25)
+        layout2.itemSize = CGSize(width: itemSize, height: 22)
         layout2.minimumInteritemSpacing = 0
         layout2.minimumLineSpacing = 0
         

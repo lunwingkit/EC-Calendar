@@ -24,13 +24,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Perennial Calendar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ah-Md-eDq">
-                    <rect key="frame" x="32" y="32" width="242" height="36"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <rect key="frame" x="32" y="48" width="256" height="36"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2tf-7h-GVZ">
-                    <rect key="frame" x="32" y="76" width="46" height="60"/>
+                    <rect key="frame" x="32" y="92" width="46" height="60"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="n4D-wD-on0"/>
                     </constraints>
@@ -39,21 +39,21 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aLX-uR-F0B">
-                    <rect key="frame" x="143" y="76" width="200" height="60"/>
+                    <rect key="frame" x="143" y="92" width="200" height="60"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="200" id="c1n-Gd-rJe"/>
                         <constraint firstAttribute="height" constant="60" id="s5d-as-jMg"/>
                     </constraints>
                 </pickerView>
                 <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J2M-2T-b1d">
-                    <rect key="frame" x="143" y="144" width="200" height="60"/>
+                    <rect key="frame" x="143" y="160" width="200" height="60"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="9dg-HG-RV2"/>
                         <constraint firstAttribute="width" constant="200" id="Lc1-zc-2vX"/>
                     </constraints>
                 </pickerView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Month" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ag-f7-pP2">
-                    <rect key="frame" x="32" y="144" width="68" height="60"/>
+                    <rect key="frame" x="32" y="160" width="68" height="60"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="aP6-Zb-0vf"/>
                     </constraints>
@@ -62,10 +62,10 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Q3r-Ef-Go2">
-                    <rect key="frame" x="16" y="244" width="343" height="180"/>
+                    <rect key="frame" x="16" y="260" width="343" height="154"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="180" id="w2J-Zy-FIB"/>
+                        <constraint firstAttribute="height" constant="154" id="w2J-Zy-FIB"/>
                     </constraints>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ANi-TZ-g4r">
                         <size key="itemSize" width="50" height="50"/>
@@ -75,22 +75,22 @@
                     </collectionViewFlowLayout>
                 </collectionView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8l-YJ-Tfi">
-                    <rect key="frame" x="175" y="212" width="25.5" height="24"/>
+                    <rect key="frame" x="175" y="228" width="25.5" height="24"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <color key="textColor" red="0.0" green="0.46055603229999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Normal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BK3-nY-HNr">
-                    <rect key="frame" x="156" y="432" width="63.5" height="24"/>
+                    <rect key="frame" x="156" y="422" width="63.5" height="24"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <color key="textColor" red="0.51164490640000004" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Iej-eT-dXI">
-                    <rect key="frame" x="16" y="464" width="343" height="180"/>
+                    <rect key="frame" x="16" y="454" width="343" height="154"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="180" id="rfn-3k-e9G"/>
+                        <constraint firstAttribute="height" constant="154" id="rfn-3k-e9G"/>
                     </constraints>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="q1d-j4-mA8">
                         <size key="itemSize" width="50" height="50"/>
@@ -117,7 +117,7 @@
                 <constraint firstItem="2tf-7h-GVZ" firstAttribute="top" secondItem="7ah-Md-eDq" secondAttribute="bottom" constant="8" id="b2x-SL-xsW"/>
                 <constraint firstItem="2tf-7h-GVZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="32" id="bqk-Hk-V5G"/>
                 <constraint firstItem="BK3-nY-HNr" firstAttribute="top" secondItem="Q3r-Ef-Go2" secondAttribute="bottom" constant="8" id="c3J-o6-KR3"/>
-                <constraint firstItem="7ah-Md-eDq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="32" id="flC-Oq-R31"/>
+                <constraint firstItem="7ah-Md-eDq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="48" id="flC-Oq-R31"/>
                 <constraint firstItem="Q3r-Ef-Go2" firstAttribute="top" secondItem="h8l-YJ-Tfi" secondAttribute="bottom" constant="8" id="gpA-AI-cHZ"/>
                 <constraint firstAttribute="trailing" secondItem="Q3r-Ef-Go2" secondAttribute="trailing" constant="16" id="jzF-FZ-8lP"/>
                 <constraint firstItem="BK3-nY-HNr" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="zSo-cR-2QO"/>

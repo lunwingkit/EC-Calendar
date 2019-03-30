@@ -17,55 +17,55 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is EC-Calender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldH-Gz-Fzf">
-                    <rect key="frame" x="32" y="32" width="271" height="36"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <rect key="frame" x="32" y="48" width="284" height="36"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- A Perennial Calendar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qbh-xc-KUg">
-                    <rect key="frame" x="16" y="100" width="171" height="21"/>
+                    <rect key="frame" x="16" y="116" width="171" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Same months &amp; dates, but smarter weeks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gea-eL-lbO">
-                    <rect key="frame" x="16" y="129" width="332" height="21"/>
+                    <rect key="frame" x="16" y="145" width="332" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Highly compatible with current system" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eN9-He-pUc">
-                    <rect key="frame" x="16" y="158" width="306" height="21"/>
+                    <rect key="frame" x="16" y="174" width="306" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Consistent 52 weeks / year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EMQ-Q6-8OI">
-                    <rect key="frame" x="16" y="187" width="218" height="21"/>
+                    <rect key="frame" x="16" y="203" width="218" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Year starts on Monday and end on Sunday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s7N-jC-UUo">
-                    <rect key="frame" x="16" y="216" width="335" height="21"/>
+                    <rect key="frame" x="16" y="232" width="335" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Annual extra Sunday on week 39" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LBA-qO-Eee">
-                    <rect key="frame" x="16" y="245" width="262" height="21"/>
+                    <rect key="frame" x="16" y="261" width="262" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Leap year extra Sunday on week 13" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gzl-65-fPm">
-                    <rect key="frame" x="16" y="274" width="281" height="21"/>
+                    <rect key="frame" x="16" y="290" width="281" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- February has consistent 29 days" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFD-X5-Kdv">
-                    <rect key="frame" x="16" y="303" width="261" height="21"/>
+                    <rect key="frame" x="16" y="319" width="261" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -76,7 +76,7 @@
                 <constraint firstItem="Qbh-xc-KUg" firstAttribute="top" secondItem="ldH-Gz-Fzf" secondAttribute="bottom" constant="32" id="BSM-tv-k1c"/>
                 <constraint firstItem="LBA-qO-Eee" firstAttribute="top" secondItem="s7N-jC-UUo" secondAttribute="bottom" constant="8" id="H32-2W-Q0K"/>
                 <constraint firstItem="EMQ-Q6-8OI" firstAttribute="top" secondItem="eN9-He-pUc" secondAttribute="bottom" constant="8" id="Iqc-gM-Xle"/>
-                <constraint firstItem="ldH-Gz-Fzf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="32" id="Jc3-dQ-dG3"/>
+                <constraint firstItem="ldH-Gz-Fzf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="48" id="Jc3-dQ-dG3"/>
                 <constraint firstItem="eN9-He-pUc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="LBF-9Q-aTa"/>
                 <constraint firstItem="ldH-Gz-Fzf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="32" id="Mte-EK-2BL"/>
                 <constraint firstItem="EMQ-Q6-8OI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="NeA-DX-i43"/>
