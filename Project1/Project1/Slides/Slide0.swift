@@ -34,5 +34,9 @@ import UIKit
         addSubview(view)
         self.view = view
     }
-
+    
+    @IBAction func onLearnMoreClicked(_ sender: Any) {
+        UIApplication.shared.open(URL(string: "https://en.wikipedia.org/wiki/Perennial_calendar")!, options: [:])
+    }
+    
 }
