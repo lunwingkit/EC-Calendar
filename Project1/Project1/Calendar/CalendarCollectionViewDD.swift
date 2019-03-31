@@ -10,23 +10,50 @@ import UIKit
 
 class CalendarCollectionViewDD: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate{
     
+    var ecCalendarCollectionView: UICollectionView!
     var calendarCollectionView: UICollectionView!
     
-    var ecCalendarCollectionDelegate: EcCalendarCollectionDelegate?
+    var ecYear: [Month] = []
+    var year: [Month] = []
     
-    let monthLength = [31,28,31,30,31,30,31,31,30,31,30,31]
-    let firstWeekdayInMonth = [2,5,5,1,3,6,1,4,0,2,5,0]
+    var ecYearLabel: UILabel!
+    var ecMonthLabel: UILabel!
+    var yearLabel: UILabel!
+    var monthLabel: UILabel!
+    
+    var currentSection = 0
+    
+    required public init?(coder aDecoder: NSCoder) {
+        
+        super.init(coder: aDecoder)
+        
+        for i in 1...12 {
+            ecYear.append(EC_Calendar.getMonth(year: 2019, month: i))
+            year.append(Normal_Calender.getMonth(year: 2019, month: i))
+        }
+        
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return monthLength[section] + firstWeekdayInMonth[section]
+        
+        switch collectionView {
+        case ecCalendarCollectionView:
+            return ecYear[section].daysInMonth + ecYear[section].startingWeekDay - 1
+        case calendarCollectionView:
+            return year[section].daysInMonth + year[section].startingWeekDay - 1
+        default:
+            return 0
+        }
+        
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
+        
         return 12
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath.section)
-        print(indexPath.row)
         
         let cell = collectionView.cellForItem(at: indexPath) as! CalendarViewCell
         
@@ -34,89 +61,47 @@ class CalendarCollectionViewDD: UIViewController, UICollectionViewDataSource, UI
             selectedView.alpha = 0.5
         }
         
-        print(cell.year)
-        print(cell.month)
-        print(cell.day)
-        print(cell.dayInWeek)
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        
         let cell = collectionView.cellForItem(at: indexPath)
         
         if let selectedView = cell?.contentView.subviews[0]{
             selectedView.alpha = 0
         }
-    }
-    
-//    private var lastContentOffset: CGFloat = 0
-//    var pageIndex = 0;
-//    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-//        if (self.lastContentOffset > scrollView.contentOffset.y) {
-//            print("UP")
-//            pageIndex -= 1
-//            if(pageIndex < 0){
-//                pageIndex = 0
-//            }
-//            print(pageIndex)
-//        }
-//        else if (self.lastContentOffset < scrollView.contentOffset.y) {
-//            print("Down")
-//            pageIndex += 1
-//            if(pageIndex > 12){
-//                pageIndex = 12
-//            }
-//            print(pageIndex)
-//        }
-//
-//        // update the new position acquired
-////        let numInRow = 7
-////        let rowNum = Int((Double(monthLength[pageIndex]) / Double(numInRow)).rounded(.up))
-////        let height = CGFloat(rowNum * 50)
-////
-////        calendarCollectionView.frame = CGRect(origin: calendarCollectionView.frame.origin, size: CGSize(width: calendarCollectionView.frame.width, height: height))
-////        print(rowNum)
-////        self.lastContentOffset = scrollView.contentOffset.y
-//    }
-    
-    var currentSection = 0
-    var lastContentOffset: CGFloat = 0
-    var scrollDirection: String!
-    
-    var yearLabel: UILabel!
-    var monthLabel: UILabel!
-    
-    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         
-//        currentSection = calendarCollectionView.visibleCells.first!
-//        if(self.lastContentOffset > scrollView.contentOffset.y){
-//            scrollDirection = "Up"
-//            currentSection += 1
-//        }else if(self.lastContentOffset < scrollView.contentOffset.y){
-//            scrollDirection = "Down"
-//            currentSection -= 1
-//        }
-//        self.lastContentOffset = scrollView.contentOffset.y
-        currentSection = calendarCollectionView.indexPathsForVisibleItems.first!.section
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         var cell = collectionView.dequeueReusableCell(withReuseIdentifier: "calendarCell", for: indexPath) as! CalendarViewCell
         
-        if (indexPath.item < firstWeekdayInMonth[indexPath.section])
-        {
+        var month: Month;
+        
+        switch collectionView {
+        case ecCalendarCollectionView:
+            month = self.ecYear[indexPath.section]
+        case calendarCollectionView:
+            month = self.year[indexPath.section]
+        default:
+            month = self.year[indexPath.section]
+        }
+        
+        if (indexPath.row < month.startingWeekDay - 1) {
             cell.isHidden = true
         }
         else{
+            
             cell.isHidden = false
             
             cell.year = 2019
             cell.month = indexPath.section + 1
-            cell.day = indexPath.row + 1 - firstWeekdayInMonth[indexPath.section]
+            cell.day = indexPath.row - month.startingWeekDay + 2
             cell.dayInWeek = (indexPath.row) % 7 + 1
             
             if let textLabel = cell.contentView.subviews[1] as? UILabel{
-                textLabel.text = "\(indexPath.row + 1 - firstWeekdayInMonth[indexPath.section])"
+                textLabel.text = "\(indexPath.row - month.startingWeekDay + 2)"
             }
             
             if let selectedView = cell.contentView.subviews[0] as? UIView{
@@ -125,65 +110,62 @@ class CalendarCollectionViewDD: UIViewController, UICollectionViewDataSource, UI
         }
         
         return cell
+        
     }
     
     func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
-        print("Will Dec")
-        print(calendarCollectionView.indexPathsForVisibleItems.first!.section)
-        currentSection = calendarCollectionView.indexPathsForVisibleItems.first!.section
-        calendarCollectionView.scrollToItem(at: IndexPath(row: 0, section: currentSection), at: UICollectionView.ScrollPosition.top, animated: false)
-        calendarCollectionView.reloadData()
-        if let textLabel =  yearLabel{
-            textLabel.text = "2019"
-        }
-        if let textLabel =  monthLabel{
-            textLabel.text = DateForm.getMonth(num: currentSection + 1)
-        }
-        let numInRow = 7
-        let cellCount = calendarCollectionView.numberOfItems(inSection: currentSection)
-        let rowNum = ceil(Double(cellCount) / Double(numInRow))
-        let height = CGFloat(rowNum * 50) //Hard Coded cell height
         
-        calendarCollectionView.frame = CGRect(origin: calendarCollectionView.frame.origin, size: CGSize(width: calendarCollectionView.frame.width, height: height))
+        switch scrollView {
+        case self.ecCalendarCollectionView:
+            currentSection = ecCalendarCollectionView.indexPathsForVisibleItems.first!.section
+        case self.calendarCollectionView:
+            currentSection = calendarCollectionView.indexPathsForVisibleItems.first!.section
+        default:
+            print("what happened")
+        }
+        
+        if let ecTextLabel = ecMonthLabel{
+            ecTextLabel.text = Custom_Calender.getMonthStringFromInt(int: currentSection + 1)
+        }
+        if let textLabel = monthLabel{
+            textLabel.text = Custom_Calender.getMonthStringFromInt(int: currentSection + 1)
+        }
+        
+        updateLayout()
+        
     }
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        ecCalendarCollectionDelegate?.didScroll(to: scrollView.contentOffset.y)
+    func updateLayout() {
+        
+        let itemSize = (UIScreen.main.bounds.width) / 7
+        
+        let layout = UICollectionViewFlowLayout()
+        
+        let ecCellCount = ecCalendarCollectionView.numberOfItems(inSection: currentSection)
+        let ecCellHeight = CGFloat(250 / ceil(Double(ecCellCount) / 7))
+        
+        layout.itemSize = CGSize(width: itemSize, height: ecCellHeight)
+        layout.minimumLineSpacing = 0
+        layout.minimumInteritemSpacing = 0;
+        
+        let layout2 = UICollectionViewFlowLayout()
+        
+        let cellCount = calendarCollectionView.numberOfItems(inSection: currentSection)
+        let cellHeight = CGFloat(250 / ceil(Double(cellCount) / 7))
+        
+        layout2.itemSize = CGSize(width: itemSize, height: cellHeight)
+        layout2.minimumLineSpacing = 0
+        layout2.minimumInteritemSpacing = 0;
+        
+        ecCalendarCollectionView.collectionViewLayout = layout
+        calendarCollectionView.collectionViewLayout = layout2
+        
+        ecCalendarCollectionView.collectionViewLayout.invalidateLayout()
+        calendarCollectionView.collectionViewLayout.invalidateLayout()
+        
+        ecCalendarCollectionView.scrollToItem(at: IndexPath(row: 0, section: currentSection), at: UICollectionView.ScrollPosition.top, animated: true)
+        calendarCollectionView.scrollToItem(at: IndexPath(row: 0, section: currentSection), at: UICollectionView.ScrollPosition.top, animated: true)
+    
     }
-}
-
-
-class DateForm{
-    static func getMonth(num: Int) -> String{
-        switch(num){
-            
-        case 1:
-            return "January";
-        case 2:
-            return "February";
-        case 3:
-            return "March";
-        case 4:
-            return "April";
-        case 5:
-            return "May";
-        case 6:
-            return "June";
-        case 7:
-            return "July";
-        case 8:
-            return "August";
-        case 9:
-            return "September";
-        case 10:
-            return "October";
-        case 11:
-            return "November";
-        case 12:
-            return "December";
-        default:
-            return "ERR"
-            
-        }
-    }
+    
 }

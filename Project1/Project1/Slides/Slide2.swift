@@ -38,7 +38,7 @@ import UIKit
         }
         
         self.currentYear = 2019
-        self.currentMonth = 1
+        self.currentMonth = 4
         
         let ec_month = EC_Calendar.getMonth(year: currentYear, month: currentMonth);
         ec_calendarArray = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];

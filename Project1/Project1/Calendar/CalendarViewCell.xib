@@ -43,7 +43,7 @@
                 <constraint firstItem="bv4-Wp-jje" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="gvO-oX-CcT"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <point key="canvasLocation" x="-32" y="66"/>
+            <point key="canvasLocation" x="-32" y="65.667166416791616"/>
         </collectionViewCell>
     </objects>
 </document>

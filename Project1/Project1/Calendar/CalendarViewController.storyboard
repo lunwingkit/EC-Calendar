@@ -130,10 +130,6 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
-                                <connections>
-                                    <outlet property="dataSource" destination="qhV-S3-fEU" id="sz7-qu-A1P"/>
-                                    <outlet property="delegate" destination="qhV-S3-fEU" id="DKG-Ko-gkF"/>
-                                </connections>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mIl-Ql-F2f" userLabel="YearMonthView">
                                 <rect key="frame" x="0.0" y="374" width="414" height="30"/>
@@ -159,10 +155,10 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9ku-Zn-qEA" userLabel="CalendarCollectionView">
-                                <rect key="frame" x="0.0" y="404" width="414" height="300"/>
+                                <rect key="frame" x="0.0" y="404" width="414" height="250"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="PjS-74-ZGf"/>
+                                    <constraint firstAttribute="height" constant="250" id="PjS-74-ZGf"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="10" id="d0m-FV-kK2">
                                     <size key="itemSize" width="50" height="50"/>
