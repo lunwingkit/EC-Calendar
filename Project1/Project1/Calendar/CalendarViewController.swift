@@ -33,6 +33,8 @@ class CalendarViewController: UIViewController {
 
     @IBOutlet weak var switchButton: UIBarButtonItem!
     
+    @IBOutlet weak var scheduleTableView: UITableView!
+    
     required init?(coder aDecoder: NSCoder) {
         
         calendarCollectionViewDD = CalendarCollectionViewDD(coder: aDecoder)!
@@ -72,6 +74,11 @@ class CalendarViewController: UIViewController {
         
         switchButton.action = #selector(self.switchBelowView(sender:))
         switchButton.target = self
+        
+        yearMonthView.isHidden = false
+        calendarCollectionView.isHidden = false
+        scheduleTableView.isHidden = true
+        
     }
     
     var isShowingSchedule = false
@@ -81,11 +88,13 @@ class CalendarViewController: UIViewController {
             print("SWITCH TO SCHEDULE NOW")
             calendarCollectionView.isHidden = true
             yearMonthView.isHidden = true
+            scheduleTableView.isHidden = false
         }
         else{
             print("SWITCH TO perennial NOW")
             calendarCollectionView.isHidden = false
             yearMonthView.isHidden = false
+            scheduleTableView.isHidden = true
         }
         isShowingSchedule = !isShowingSchedule
     }

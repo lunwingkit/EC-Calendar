@@ -222,6 +222,7 @@
                         <outlet property="ecMonthLabel" destination="9gO-96-aQe" id="xNA-YG-zyl"/>
                         <outlet property="ecYearLabel" destination="OlN-F7-65C" id="Rqk-Oq-gdu"/>
                         <outlet property="monthLabel" destination="ICs-9s-7X4" id="Idh-AD-OZ8"/>
+                        <outlet property="scheduleTableView" destination="COs-N5-Xzq" id="rZ8-NT-pBw"/>
                         <outlet property="switchButton" destination="R16-zp-u1s" id="2QN-LK-grS"/>
                         <outlet property="yearLabel" destination="hfw-SJ-t1g" id="LKA-99-dql"/>
                         <outlet property="yearMonthView" destination="mIl-Ql-F2f" id="7UO-gD-C30"/>
