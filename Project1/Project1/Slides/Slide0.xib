@@ -70,6 +70,13 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="G15-6I-c65">
+                    <rect key="frame" x="139.5" y="388" width="96" height="96"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="96" id="RhQ-9L-mkn"/>
+                        <constraint firstAttribute="height" constant="96" id="oSn-F6-Uh9"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <constraints>
                 <constraint firstItem="gea-eL-lbO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="540-iK-0tH"/>
@@ -82,6 +89,7 @@
                 <constraint firstItem="EMQ-Q6-8OI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="NeA-DX-i43"/>
                 <constraint firstItem="s7N-jC-UUo" firstAttribute="top" secondItem="EMQ-Q6-8OI" secondAttribute="bottom" constant="8" id="Rqo-IU-S38"/>
                 <constraint firstItem="Gzl-65-fPm" firstAttribute="top" secondItem="LBA-qO-Eee" secondAttribute="bottom" constant="8" id="SD5-t6-hb0"/>
+                <constraint firstItem="G15-6I-c65" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Teg-rD-aLM"/>
                 <constraint firstItem="BFD-X5-Kdv" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="U43-ON-44c"/>
                 <constraint firstItem="eN9-He-pUc" firstAttribute="top" secondItem="gea-eL-lbO" secondAttribute="bottom" constant="8" id="UFW-67-O2B"/>
                 <constraint firstItem="gea-eL-lbO" firstAttribute="top" secondItem="Qbh-xc-KUg" secondAttribute="bottom" constant="8" id="V1v-ZG-uio"/>
@@ -89,10 +97,14 @@
                 <constraint firstItem="BFD-X5-Kdv" firstAttribute="top" secondItem="Gzl-65-fPm" secondAttribute="bottom" constant="8" id="iiJ-uQ-ySy"/>
                 <constraint firstItem="LBA-qO-Eee" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="k3P-bs-y1G"/>
                 <constraint firstItem="Gzl-65-fPm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="opF-SZ-FCO"/>
+                <constraint firstItem="G15-6I-c65" firstAttribute="top" secondItem="BFD-X5-Kdv" secondAttribute="bottom" constant="48" id="ur2-Nx-Sqg"/>
                 <constraint firstItem="s7N-jC-UUo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="v7k-ED-AdI"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="39.200000000000003" y="46.326836581709152"/>
         </view>
     </objects>
+    <resources>
+        <image name="icon" width="1024" height="1024"/>
+    </resources>
 </document>
