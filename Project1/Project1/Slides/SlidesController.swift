@@ -10,6 +10,7 @@ import UIKit
 
 class SlidesController: UIViewController, UIScrollViewDelegate {
 
+    @IBOutlet weak var finishButton: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
     
@@ -43,6 +44,8 @@ class SlidesController: UIViewController, UIScrollViewDelegate {
         
         view.bringSubviewToFront(pageControl)
         
+        view.bringSubviewToFront(self.finishButton)
+        
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -52,4 +55,15 @@ class SlidesController: UIViewController, UIScrollViewDelegate {
         
     }
 
+    @IBAction func onFinishButtonClicked(_ sender: Any) {
+        
+        let storyboard = UIStoryboard(name: "CalendarViewController", bundle: nil)
+        let vc = storyboard.instantiateInitialViewController() as! UIViewController
+        
+        present(vc, animated: true, completion: nil)
+        
+        print(1)
+        
+    }
+    
 }
