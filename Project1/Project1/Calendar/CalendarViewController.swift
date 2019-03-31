@@ -25,10 +25,13 @@ class CalendarViewController: UIViewController {
     @IBOutlet weak var ecYearLabel: UILabel!
     @IBOutlet weak var ecMonthLabel: UILabel!
     
+    @IBOutlet weak var yearMonthView: UIView!
     @IBOutlet weak var yearLabel: UILabel!
     @IBOutlet weak var monthLabel: UILabel!
     
     var calendarCollectionViewDD: CalendarCollectionViewDD
+
+    @IBOutlet weak var switchButton: UIBarButtonItem!
     
     required init?(coder aDecoder: NSCoder) {
         
@@ -67,6 +70,24 @@ class CalendarViewController: UIViewController {
         calendarCollectionViewDD.currentSection = self.currentMonth
         calendarCollectionViewDD.updateLayout()
         
+        switchButton.action = #selector(self.switchBelowView(sender:))
+        switchButton.target = self
+    }
+    
+    var isShowingSchedule = false
+    @objc func switchBelowView(sender: UIBarButtonItem){
+        print("PRESSED")
+        if(!isShowingSchedule){
+            print("SWITCH TO SCHEDULE NOW")
+            calendarCollectionView.isHidden = true
+            yearMonthView.isHidden = true
+        }
+        else{
+            print("SWITCH TO perennial NOW")
+            calendarCollectionView.isHidden = false
+            yearMonthView.isHidden = false
+        }
+        isShowingSchedule = !isShowingSchedule
     }
     
 }
