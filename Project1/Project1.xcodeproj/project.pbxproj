@@ -12,6 +12,7 @@
 		972411B8224A74990054B72F /* NewEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972411B7224A74990054B72F /* NewEventViewController.swift */; };
 		972411C4224A9BFB0054B72F /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 972411C1224A9B5B0054B72F /* Eureka.framework */; };
 		972411C5224A9BFB0054B72F /* Eureka.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 972411C1224A9B5B0054B72F /* Eureka.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		972411F4224B1FE00054B72F /* Project1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 972411F2224B1FE00054B72F /* Project1.xcdatamodeld */; };
 		977DFCA622351513005BB0AD /* ContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977DFCA522351513005BB0AD /* ContainerController.swift */; };
 		977DFCA822351527005BB0AD /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977DFCA722351527005BB0AD /* CalendarViewController.swift */; };
 		977DFCF62248AF81005BB0AD /* CalendarViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 977DFCF52248AF81005BB0AD /* CalendarViewController.storyboard */; };
@@ -78,6 +79,7 @@
 		972411B3224A69150054B72F /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		972411B7224A74990054B72F /* NewEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEventViewController.swift; sourceTree = "<group>"; };
 		972411BB224A9B5B0054B72F /* Eureka.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Eureka.xcodeproj; path = Eureka/Eureka.xcodeproj; sourceTree = "<group>"; };
+		972411F3224B1FE00054B72F /* Project1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Project1.xcdatamodel; sourceTree = "<group>"; };
 		977DFCA522351513005BB0AD /* ContainerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerController.swift; sourceTree = "<group>"; };
 		977DFCA722351527005BB0AD /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		977DFCF52248AF81005BB0AD /* CalendarViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CalendarViewController.storyboard; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 			children = (
 				ACEBD4EA2247738D007853A4 /* Slides */,
 				97D7B75A2232B874001DE6DB /* AppDelegate.swift */,
+				972411F2224B1FE00054B72F /* Project1.xcdatamodeld */,
 				972411B6224A69270054B72F /* Calendar */,
 				97D7B75C2232B874001DE6DB /* ViewController.swift */,
 				977DFCA522351513005BB0AD /* ContainerController.swift */,
@@ -293,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				97D9FA3022493D5D0058152C /* CalendarCollectionViewDD.swift in Sources */,
+				972411F4224B1FE00054B72F /* Project1.xcdatamodeld in Sources */,
 				977DFCF92248C066005BB0AD /* CalendarViewCell.swift in Sources */,
 				977DFCA822351527005BB0AD /* CalendarViewController.swift in Sources */,
 				ACBB0B15223E9F97000F2D9B /* Slide1.swift in Sources */,
@@ -517,6 +521,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		972411F2224B1FE00054B72F /* Project1.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				972411F3224B1FE00054B72F /* Project1.xcdatamodel */,
+			);
+			currentVersion = 972411F3224B1FE00054B72F /* Project1.xcdatamodel */;
+			path = Project1.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 97D7B74F2232B874001DE6DB /* Project object */;
 }
