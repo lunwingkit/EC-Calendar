@@ -288,4 +288,14 @@ class CalendarViewController: UIViewController, NSFetchedResultsControllerDelega
     
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange sectionInfo: NSFetchedResultsSectionInfo, atSectionIndex sectionIndex: Int, for type: NSFetchedResultsChangeType) {
     }
+    
+    @IBAction func onMenuClicked(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateInitialViewController() as! UIViewController
+        
+        present(vc, animated: true, completion: nil)
+        
+        print(1)
+    }
+    
 }

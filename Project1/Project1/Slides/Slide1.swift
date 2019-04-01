@@ -28,7 +28,12 @@ class Slide1: UIView, UIPickerViewDelegate, UIPickerViewDataSource {
         
         self.festivalArray = [
             Festival(name: "Father's Day", month: 6, day: nil, dayOfWeek: 7, dayOfWeekIndex: 2),
-            Festival(name: "Mother's Day", month: 5, day: nil, dayOfWeek: 7, dayOfWeekIndex: 1)
+            Festival(name: "Mother's Day", month: 5, day: nil, dayOfWeek: 7, dayOfWeekIndex: 1),
+            Festival(name: "Christmas Day", month: 12, day: 25, dayOfWeek: nil, dayOfWeekIndex: nil),
+            Festival(name: "New Year", month: 1, day: 1, dayOfWeek: nil, dayOfWeekIndex: nil),
+            Festival(name: "Labour Day", month: 5, day: 1, dayOfWeek: nil, dayOfWeekIndex: nil),
+            Festival(name: "National Day", month: 10, day: 1, dayOfWeek: nil, dayOfWeekIndex: nil),
+            Festival(name: "HKSAR Establishment Day", month: 7, day: 1, dayOfWeek: nil, dayOfWeekIndex: nil)
         ]
         self.yearArray = [String]()
         for i in (1970..<2020).reversed() {
@@ -47,7 +52,11 @@ class Slide1: UIView, UIPickerViewDelegate, UIPickerViewDataSource {
         self.festivalArray = [
             Festival(name: "Father's Day", month: 6, day: nil, dayOfWeek: 7, dayOfWeekIndex: 2),
             Festival(name: "Mother's Day", month: 5, day: nil, dayOfWeek: 7, dayOfWeekIndex: 1),
-            Festival(name: "Christmas Day", month: 12, day: 25, dayOfWeek: nil, dayOfWeekIndex: nil)
+            Festival(name: "Christmas Day", month: 12, day: 25, dayOfWeek: nil, dayOfWeekIndex: nil),
+            Festival(name: "New Year", month: 1, day: 1, dayOfWeek: nil, dayOfWeekIndex: nil),
+            Festival(name: "Labour Day", month: 5, day: 1, dayOfWeek: nil, dayOfWeekIndex: nil),
+            Festival(name: "National Day", month: 10, day: 1, dayOfWeek: nil, dayOfWeekIndex: nil),
+            Festival(name: "HKSAR Establishment Day", month: 7, day: 1, dayOfWeek: nil, dayOfWeekIndex: nil)
         ]
         self.yearArray = [String]()
         for i in (1970..<2020).reversed() {
