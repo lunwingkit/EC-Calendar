@@ -8,9 +8,10 @@
 
 import UIKit
 
-class CustomTableViewCell: UITableViewCell, UITextFieldDelegate {
+class ScheduleTableViewCell: UITableViewCell, UITextFieldDelegate {
 
     //@IBOutlet weak var textField: UITextFiled!
+    @IBOutlet var titleLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,8 +24,4 @@ class CustomTableViewCell: UITableViewCell, UITextFieldDelegate {
         // Configure the view for the selected state
     }
     
-}
-
-class TextTableViewCell: CustomTableViewCell{
-    //@IBOutlet weak var
 }

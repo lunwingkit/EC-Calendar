@@ -8,6 +8,7 @@
 
 import UIKit
 import Eureka
+import CoreData
 
 class NewEventNavigationController: UINavigationController, RowControllerType {
     var onDismissCallback : ((UIViewController) -> ())?
@@ -18,12 +19,86 @@ class NewEventViewController : FormViewController{
         self.dismiss(animated: true, completion: nil)
     }
     
+    var scheduleTableView: UITableView!
+    
     @objc func saveTapped(_ barButtonItem: UIBarButtonItem) {
         print("Save")
 //        let row: TextRow? = form.rowBy(tag: "Title")
 //        let value = row?.value
         let valuesDictionary = form.values()
         print(valuesDictionary)
+        saveEvent()
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    var managedObjectContext: NSManagedObjectContext?
+    
+    func newSaveEvent(){
+        guard let managedObjectContext = managedObjectContext else {return}
+        let event = Event(context: managedObjectContext)
+        
+        let titleRow: TextRow? = form.rowBy(tag: "Title")
+        let allDayRow: SwitchRow? = form.rowBy(tag: "All-day")
+        let locationRow: TextRow? = form.rowBy(tag: "Location")
+        let startsRow: DateTimeInlineRow? = form.rowBy(tag: "Starts")
+        let endsRow: DateTimeInlineRow? = form.rowBy(tag: "Ends")
+        let noteRow: TextAreaRow? = form.rowBy(tag: "notes")
+        
+        event.title = titleRow?.value
+        event.allDay = (allDayRow?.value)!
+        event.location = locationRow?.value
+        event.startDate = startsRow?.value as! NSDate
+        event.endDate = endsRow?.value as! NSDate
+        event.notes = noteRow?.value
+        
+    }
+    
+    
+    func saveEvent(){
+        let moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        let myEntityName = "Event"
+        let event = NSEntityDescription.insertNewObject(forEntityName: myEntityName, into: moc) as! Event
+        event.allDay = true
+        event.startDate = Date() as NSDate
+        event.endDate = Date() as NSDate
+        let titleRow: TextRow? = form.rowBy(tag: "Title")
+        let allDayRow: SwitchRow? = form.rowBy(tag: "All-day")
+        let locationRow: TextRow? = form.rowBy(tag: "Location")
+        let startsRow: DateTimeInlineRow? = form.rowBy(tag: "Starts")
+        let endsRow: DateTimeInlineRow? = form.rowBy(tag: "Ends")
+        let noteRow: TextAreaRow? = form.rowBy(tag: "notes")
+        
+        event.title = titleRow?.value
+        event.allDay = (allDayRow?.value)!
+        event.location = locationRow?.value
+        event.startDate = startsRow?.value as! NSDate
+        event.endDate = endsRow?.value as! NSDate
+        event.notes = noteRow?.value
+        
+        do{
+            try moc.save()
+        } catch{
+            fatalError("\(error)")
+        }
+        
+        
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: myEntityName)
+        do{
+            let results =
+                try moc.fetch(request) as! [Event]
+            for result in results{
+                print("\(String(describing: result.title))")
+                print("\(String(describing: result.allDay))")
+                print("\(String(describing: result.startDate))")
+                print("\(String(describing: result.endDate))")
+                print("\(String(describing: result.notes))")
+                print("\(String(describing: result.location))")
+            }
+             print(results.count)
+        }catch{
+            fatalError("\(error)")
+        }
     }
     
     override func viewDidLoad(){
@@ -37,6 +112,7 @@ class NewEventViewController : FormViewController{
         navigationItem.rightBarButtonItem?.target = self
         navigationItem.rightBarButtonItem?.isEnabled = true
         navigationItem.rightBarButtonItem?.action = #selector(self.saveTapped(_:))
+        navigationItem.rightBarButtonItem?.isEnabled = false
     }
     
     private func initializeForm() {
@@ -45,6 +121,17 @@ class NewEventViewController : FormViewController{
             
             TextRow("Title").cellSetup { cell, row in
                 cell.textField.placeholder = row.tag
+            }.onChange{ row in
+                let text = row.value
+                if(text == nil || (text?.isEmpty)!){
+                    print("BLK")
+                    print(self.scheduleTableView)
+                    self.navigationItem.rightBarButtonItem?.isEnabled = false
+                }
+                else{
+                    print("OK")
+                    self.navigationItem.rightBarButtonItem?.isEnabled = true
+                }
             }
             
             <<< TextRow("Location").cellSetup {
@@ -54,6 +141,7 @@ class NewEventViewController : FormViewController{
             +++
             
             SwitchRow("All-day") {
+                $0.value = false
                 $0.title = $0.tag
                 }.onChange { [weak self] row in
                     let startDate: DateTimeInlineRow! = self?.form.rowBy(tag: "Starts")

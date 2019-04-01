@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		972411B4224A69150054B72F /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972411B2224A69150054B72F /* CustomTableViewCell.swift */; };
-		972411B5224A69150054B72F /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 972411B3224A69150054B72F /* CustomTableViewCell.xib */; };
+		972411B4224A69150054B72F /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972411B2224A69150054B72F /* ScheduleTableViewCell.swift */; };
+		972411B5224A69150054B72F /* ScheduleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 972411B3224A69150054B72F /* ScheduleTableViewCell.xib */; };
 		972411B8224A74990054B72F /* NewEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972411B7224A74990054B72F /* NewEventViewController.swift */; };
 		972411C4224A9BFB0054B72F /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 972411C1224A9B5B0054B72F /* Eureka.framework */; };
 		972411C5224A9BFB0054B72F /* Eureka.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 972411C1224A9B5B0054B72F /* Eureka.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		972411F4224B1FE00054B72F /* Project1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 972411F2224B1FE00054B72F /* Project1.xcdatamodeld */; };
+		9764A4F12250DF1600D41649 /* Event+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9764A4EF2250DF1600D41649 /* Event+CoreDataClass.swift */; };
+		9764A4F22250DF1600D41649 /* Event+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9764A4F02250DF1600D41649 /* Event+CoreDataProperties.swift */; };
+		9764A4F5225122D300D41649 /* ScheduleTableViewDateSourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9764A4F4225122D300D41649 /* ScheduleTableViewDateSourceDelegate.swift */; };
 		977DFCA622351513005BB0AD /* ContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977DFCA522351513005BB0AD /* ContainerController.swift */; };
 		977DFCA822351527005BB0AD /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977DFCA722351527005BB0AD /* CalendarViewController.swift */; };
 		977DFCF62248AF81005BB0AD /* CalendarViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 977DFCF52248AF81005BB0AD /* CalendarViewController.storyboard */; };
@@ -75,11 +78,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		972411B2224A69150054B72F /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
-		972411B3224A69150054B72F /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		972411B2224A69150054B72F /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
+		972411B3224A69150054B72F /* ScheduleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScheduleTableViewCell.xib; sourceTree = "<group>"; };
 		972411B7224A74990054B72F /* NewEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEventViewController.swift; sourceTree = "<group>"; };
 		972411BB224A9B5B0054B72F /* Eureka.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Eureka.xcodeproj; path = Eureka/Eureka.xcodeproj; sourceTree = "<group>"; };
 		972411F3224B1FE00054B72F /* Project1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Project1.xcdatamodel; sourceTree = "<group>"; };
+		9764A4EF2250DF1600D41649 /* Event+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Event+CoreDataClass.swift"; path = "Project1/Event+CoreDataClass.swift"; sourceTree = "<group>"; };
+		9764A4F02250DF1600D41649 /* Event+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Event+CoreDataProperties.swift"; path = "Project1/Event+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		9764A4F4225122D300D41649 /* ScheduleTableViewDateSourceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewDateSourceDelegate.swift; sourceTree = "<group>"; };
 		977DFCA522351513005BB0AD /* ContainerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerController.swift; sourceTree = "<group>"; };
 		977DFCA722351527005BB0AD /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		977DFCF52248AF81005BB0AD /* CalendarViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CalendarViewController.storyboard; sourceTree = "<group>"; };
@@ -120,14 +126,15 @@
 		972411B6224A69270054B72F /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
+				977DFCF52248AF81005BB0AD /* CalendarViewController.storyboard */,
 				977DFCA722351527005BB0AD /* CalendarViewController.swift */,
 				977DFCF72248C066005BB0AD /* CalendarViewCell.swift */,
 				977DFCF82248C066005BB0AD /* CalendarViewCell.xib */,
 				97D9FA2F22493D5D0058152C /* CalendarCollectionViewDD.swift */,
-				977DFCF52248AF81005BB0AD /* CalendarViewController.storyboard */,
+				9764A4F4225122D300D41649 /* ScheduleTableViewDateSourceDelegate.swift */,
+				972411B2224A69150054B72F /* ScheduleTableViewCell.swift */,
+				972411B3224A69150054B72F /* ScheduleTableViewCell.xib */,
 				972411B7224A74990054B72F /* NewEventViewController.swift */,
-				972411B2224A69150054B72F /* CustomTableViewCell.swift */,
-				972411B3224A69150054B72F /* CustomTableViewCell.xib */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -144,6 +151,8 @@
 		97D7B74E2232B874001DE6DB = {
 			isa = PBXGroup;
 			children = (
+				9764A4EF2250DF1600D41649 /* Event+CoreDataClass.swift */,
+				9764A4F02250DF1600D41649 /* Event+CoreDataProperties.swift */,
 				97D7B7592232B874001DE6DB /* Project1 */,
 				97D7B7582232B874001DE6DB /* Products */,
 				972411BB224A9B5B0054B72F /* Eureka.xcodeproj */,
@@ -283,7 +292,7 @@
 				AC9438D1224780D1005D7579 /* CalendarCell.xib in Resources */,
 				97D7B7622232B876001DE6DB /* Assets.xcassets in Resources */,
 				ACBB0B13223E9F86000F2D9B /* Slide1.xib in Resources */,
-				972411B5224A69150054B72F /* CustomTableViewCell.xib in Resources */,
+				972411B5224A69150054B72F /* ScheduleTableViewCell.xib in Resources */,
 				97D7B7602232B874001DE6DB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				97D9FA3022493D5D0058152C /* CalendarCollectionViewDD.swift in Sources */,
+				9764A4F22250DF1600D41649 /* Event+CoreDataProperties.swift in Sources */,
 				972411F4224B1FE00054B72F /* Project1.xcdatamodeld in Sources */,
 				977DFCF92248C066005BB0AD /* CalendarViewCell.swift in Sources */,
 				977DFCA822351527005BB0AD /* CalendarViewController.swift in Sources */,
@@ -305,11 +315,13 @@
 				ACEBD4EE22477407007853A4 /* Slide2.swift in Sources */,
 				97D7B75D2232B874001DE6DB /* ViewController.swift in Sources */,
 				97D7B75B2232B874001DE6DB /* AppDelegate.swift in Sources */,
+				9764A4F12250DF1600D41649 /* Event+CoreDataClass.swift in Sources */,
 				ACBB0B0F223E2A78000F2D9B /* Slide0.swift in Sources */,
 				977DFCA622351513005BB0AD /* ContainerController.swift in Sources */,
+				9764A4F5225122D300D41649 /* ScheduleTableViewDateSourceDelegate.swift in Sources */,
 				972411B8224A74990054B72F /* NewEventViewController.swift in Sources */,
 				AC9438D0224780D1005D7579 /* CalendarCell.swift in Sources */,
-				972411B4224A69150054B72F /* CustomTableViewCell.swift in Sources */,
+				972411B4224A69150054B72F /* ScheduleTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -24,7 +24,8 @@ class CalendarCollectionViewDD: UIViewController, UICollectionViewDataSource, UI
     var currentSection = 0
     
     required public init?(coder aDecoder: NSCoder) {
-        
+        ecCalendarHiddenCellCount = 0
+        calendarHiddenCellCount = 0
         super.init(coder: aDecoder)
         
         for i in 1...12 {
@@ -53,6 +54,8 @@ class CalendarCollectionViewDD: UIViewController, UICollectionViewDataSource, UI
         
     }
     
+    var ecCalendarHiddenCellCount: Int
+    var calendarHiddenCellCount: Int
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         let cell = collectionView.cellForItem(at: indexPath) as! CalendarViewCell
@@ -61,6 +64,34 @@ class CalendarCollectionViewDD: UIViewController, UICollectionViewDataSource, UI
             selectedView.alpha = 0.5
         }
         
+        ecCalendarHiddenCellCount = 0
+        for cell in ecCalendarCollectionView.visibleCells{
+            if(cell.isHidden)
+            {
+                ecCalendarHiddenCellCount = ecCalendarHiddenCellCount + 1
+            }
+        }
+        
+       calendarHiddenCellCount = 0
+        for cell in calendarCollectionView.visibleCells{
+            if(cell.isHidden)
+            {
+                calendarHiddenCellCount = calendarHiddenCellCount + 1
+            }
+        }
+        
+        switch collectionView{
+        case calendarCollectionView:
+            ecCalendarCollectionView.cellForItem(at: IndexPath(row: indexPath.row - calendarHiddenCellCount + ecCalendarHiddenCellCount, section: indexPath.section))?.contentView.subviews[0].alpha = 0.5
+        case ecCalendarCollectionView:
+            calendarCollectionView.cellForItem(at: IndexPath(row: indexPath.row + calendarHiddenCellCount - ecCalendarHiddenCellCount, section: indexPath.section))?.contentView.subviews[0].alpha = 0.5
+            
+        default: break
+            
+        }
+        
+        
+        print(indexPath)
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
@@ -70,6 +101,30 @@ class CalendarCollectionViewDD: UIViewController, UICollectionViewDataSource, UI
         if let selectedView = cell?.contentView.subviews[0]{
             selectedView.alpha = 0
         }
+        
+        for cell in ecCalendarCollectionView.visibleCells{
+            cell.contentView.subviews[0].alpha = 0
+        }
+        for cell in calendarCollectionView.visibleCells{
+            cell.contentView.subviews[0].alpha = 0
+        }
+//        switch collectionView{
+//        case calendarCollectionView:
+//            for cell in ecCalendarCollectionView.visibleCells{
+//                cell.contentView.subviews[0].alpha = 0
+//            }
+////            ecCalendarCollectionView.cellForItem(at: IndexPath(row: indexPath.row - calendarHiddenCellCount + ecCalendarHiddenCellCount, section: indexPath.section))?.contentView.subviews[0].alpha = 0
+//        case ecCalendarCollectionView:
+//            for cell in calendarCollectionView.visibleCells{
+//                cell.contentView.subviews[0].alpha = 0
+//            }
+////            calendarCollectionView.cellForItem(at: IndexPath(row: indexPath.row + calendarHiddenCellCount - ecCalendarHiddenCellCount, section: indexPath.section))?.contentView.subviews[0].alpha = 0
+//
+//        default: break
+//
+//        }
+        ecCalendarHiddenCellCount = 0
+        calendarHiddenCellCount = 0
         
     }
     
@@ -112,9 +167,20 @@ class CalendarCollectionViewDD: UIViewController, UICollectionViewDataSource, UI
         return cell
         
     }
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+//        print("scrollViewWillBeginDragging")
+        
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        print("scrollViewDidScroll")
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+//        print("scrollViewDidEndDecelerating")
+    }
     
     func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
-        
         switch scrollView {
         case self.ecCalendarCollectionView:
             currentSection = ecCalendarCollectionView.indexPathsForVisibleItems.first!.section
@@ -123,16 +189,16 @@ class CalendarCollectionViewDD: UIViewController, UICollectionViewDataSource, UI
         default:
             print("what happened")
         }
-        
+
         if let ecTextLabel = ecMonthLabel{
             ecTextLabel.text = Custom_Calender.getMonthStringFromInt(int: currentSection + 1)
         }
         if let textLabel = monthLabel{
             textLabel.text = Custom_Calender.getMonthStringFromInt(int: currentSection + 1)
         }
-        
+
         updateLayout()
-        
+
     }
     
     func updateLayout() {
@@ -165,7 +231,23 @@ class CalendarCollectionViewDD: UIViewController, UICollectionViewDataSource, UI
         
         ecCalendarCollectionView.scrollToItem(at: IndexPath(row: 0, section: currentSection), at: UICollectionView.ScrollPosition.top, animated: true)
         calendarCollectionView.scrollToItem(at: IndexPath(row: 0, section: currentSection), at: UICollectionView.ScrollPosition.top, animated: true)
+        
+        ecCalendarHiddenCellCount = 0
+        for cell in ecCalendarCollectionView.visibleCells{
+            if(cell.isHidden)
+            {
+                ecCalendarHiddenCellCount += ecCalendarHiddenCellCount
+            }
+        }
     
+        calendarHiddenCellCount = 0
+        for cell in calendarCollectionView.visibleCells{
+            if(cell.isHidden)
+            {
+                calendarHiddenCellCount += calendarHiddenCellCount
+            }
+        }
     }
-    
 }
+
+

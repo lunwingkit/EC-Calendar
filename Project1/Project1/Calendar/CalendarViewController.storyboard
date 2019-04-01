@@ -140,9 +140,9 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="COs-N5-Xzq">
                                 <rect key="frame" x="0.0" y="374" width="414" height="362"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Table View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3Bi-kC-uaT">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="21"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="q5y-n7-sxa">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -221,7 +221,7 @@
                             <barButtonItem systemItem="add" id="AbH-vM-V4T">
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <segue destination="fGU-1m-AWL" kind="modal" identifier="NativeEventsFormNavigationControllerSegue" id="MLz-zg-dN6"/>
+                                    <action selector="addEvent:" destination="qhV-S3-fEU" id="HJq-11-w2R"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Switch" id="R16-zp-u1s">
@@ -234,11 +234,13 @@
                         <outlet property="ecCalendarCollectionView" destination="tUF-UZ-tS1" id="Dob-oA-a28"/>
                         <outlet property="ecMonthLabel" destination="9gO-96-aQe" id="xNA-YG-zyl"/>
                         <outlet property="ecYearLabel" destination="OlN-F7-65C" id="Rqk-Oq-gdu"/>
+                        <outlet property="messageLabel" destination="q5y-n7-sxa" id="A5a-oK-jIS"/>
                         <outlet property="monthLabel" destination="ICs-9s-7X4" id="Idh-AD-OZ8"/>
                         <outlet property="scheduleTableView" destination="COs-N5-Xzq" id="rZ8-NT-pBw"/>
                         <outlet property="switchButton" destination="R16-zp-u1s" id="2QN-LK-grS"/>
                         <outlet property="yearLabel" destination="hfw-SJ-t1g" id="LKA-99-dql"/>
                         <outlet property="yearMonthView" destination="mIl-Ql-F2f" id="7UO-gD-C30"/>
+                        <segue destination="fGU-1m-AWL" kind="presentation" identifier="NativeEventsFormNavigationControllerSegue" id="qGf-Te-38y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nm1-l4-Lp8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -264,7 +266,7 @@
         <!--New Event-->
         <scene sceneID="gIl-1F-6Uf">
             <objects>
-                <viewController id="uvx-bO-rpZ" customClass="NewEventViewController" customModule="Project1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewEventVC" id="uvx-bO-rpZ" customClass="NewEventViewController" customModule="Project1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wig-qt-afq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
