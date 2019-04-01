@@ -33,11 +33,22 @@
                             <constraint firstAttribute="height" constant="1" id="i3l-2z-9uS"/>
                         </constraints>
                     </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FvH-ob-3QU">
+                        <rect key="frame" x="0.0" y="42.5" width="320" height="1"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="F0h-0u-Rgu"/>
+                        </constraints>
+                    </view>
                 </subviews>
+                <color key="backgroundColor" white="0.93035181417857127" alpha="1" colorSpace="calibratedWhite"/>
                 <constraints>
+                    <constraint firstAttribute="bottom" secondItem="FvH-ob-3QU" secondAttribute="bottom" id="EeG-q3-y3d"/>
                     <constraint firstItem="KUn-0E-4i1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Nf8-2l-pcr"/>
+                    <constraint firstAttribute="trailing" secondItem="FvH-ob-3QU" secondAttribute="trailing" id="Yqy-W0-sXR"/>
                     <constraint firstAttribute="trailing" secondItem="KUn-0E-4i1" secondAttribute="trailing" id="jDR-e6-sDx"/>
                     <constraint firstItem="KUn-0E-4i1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="tLv-m7-yDF"/>
+                    <constraint firstItem="FvH-ob-3QU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="zVT-5j-obc"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

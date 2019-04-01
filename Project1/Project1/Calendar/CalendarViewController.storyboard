@@ -224,7 +224,7 @@
                                     <action selector="addEvent:" destination="qhV-S3-fEU" id="HJq-11-w2R"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="Switch" id="R16-zp-u1s">
+                            <barButtonItem title="Item" image="list25" id="R16-zp-u1s">
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </barButtonItem>
                         </rightBarButtonItems>
@@ -283,4 +283,7 @@
             <point key="canvasLocation" x="896" y="102"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="list25" width="25" height="25"/>
+    </resources>
 </document>

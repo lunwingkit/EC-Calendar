@@ -51,22 +51,26 @@ class ScheduleTableViewDateSourceDelegate: UIViewController, UITableViewDataSour
     func updateView(){
         var hasEvent = false
         
-        if let event = fetchedResultsController.fetchedObjects{
-            hasEvent = event.count > 0
-        }
-        
-        if(fetchedResultsController.fetchedObjects!.count > 0 && scheduleTableView.numberOfRows(inSection: 0) > 0){
+        if(fetchedResultsController.fetchedObjects!.count > 0){
             hasEvent = true
         }
         else{
             hasEvent = false
         }
+        
         print(fetchedResultsController.fetchedObjects!.count)
         print(scheduleTableView.numberOfRows(inSection: 0))
         print("THE VALUE OF HAS EVENT")
         print(hasEvent)
         
-        scheduleTableView.isHidden = !hasEvent
+        if(hasEvent == true){
+            messageLabel.isHidden = true
+        }
+        else{
+            messageLabel.isHidden = false
+        }
+        
+        //scheduleTableView.isHidden = !hasEvent
         messageLabel.isHidden = hasEvent
         //TODO: Add messageLabel
     }
