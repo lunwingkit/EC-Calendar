@@ -216,6 +216,9 @@
                     <navigationItem key="navigationItem" title="Calendar" largeTitleDisplayMode="always" id="o8G-BY-hl0">
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="hfQ-aS-pO2">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="onMenuClicked:" destination="qhV-S3-fEU" id="WtG-Gl-VeZ"/>
+                            </connections>
                         </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem systemItem="add" id="AbH-vM-V4T">
